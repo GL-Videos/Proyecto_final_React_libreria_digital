@@ -1,0 +1,61 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-shadow: rgba(173, 173, 173, 0.767) 1px 1px;
+}
+
+body {
+    background-color: rgb(166, 190, 182);
+    height: 100vh;
+}
+
+
+.encabezadoPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(143, 197, 192);
+    box-shadow: black 2px 2px;
+}
+
+.encabezadoPrincipal div {
+    margin: 15px;
+}
+
+.menu {
+    margin-right: 15px;
+}
+
+.menu a {
+    margin: 5px 10px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.logo {
+    text-transform: uppercase;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes {
+    margin-top: 760px;
+    margin-bottom: 20px;
+}
+
+.redes a {
+    padding: 0 100px;
+    color: black;
+    font-size: 18pt;
+}
+
+.textoFooter {
+    margin-bottom: 10px;
+}
