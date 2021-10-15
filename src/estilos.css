@@ -5,6 +5,7 @@
     box-sizing: border-box;
     text-decoration: none;
     text-shadow: rgba(173, 173, 173, 0.767) 1px 1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(143, 197, 192);
-    box-shadow: black 2px 2px;
+    box-shadow: rgba(0, 29, 73, 0.753) 2px 2px;
 }
 
 .encabezadoPrincipal div {
@@ -33,6 +34,7 @@ body {
     margin: 5px 10px;
     color: black;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .logo {
@@ -46,16 +48,12 @@ footer {
 }
 
 .redes {
-    margin-top: 760px;
+    margin-top: 460px;
     margin-bottom: 20px;
 }
 
 .redes a {
     padding: 0 100px;
     color: black;
-    font-size: 18pt;
-}
-
-.textoFooter {
-    margin-bottom: 10px;
+    font-size: 16pt;
 }
