@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App_libros from './componentes/App_libros';
+import AppBooks from './componentes/AppBooks';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './estilos.css'
+import './styles.css'
 
-ReactDOM.render (<App_libros/> , document.getElementById ("root"))
+ReactDOM.render (<AppBooks/> , document.getElementById ("root"))

@@ -1,9 +1,9 @@
 
-import Carrito from './CartWidget.js'
+import ShoppingCart from './CartWidget.js'
 
 // Encabezado de la página web
 
-const Encabezado = () => {
+const Header = () => {
     return(
         <header className="encabezadoPrincipal">
             <div>
@@ -15,7 +15,7 @@ const Encabezado = () => {
                 <a href="#">Inicio</a>
                 <a href="#">Categorías</a>
                 <a href="#">Ofertas</a>
-                <Carrito/>
+                <ShoppingCart/>
                 <a href="#">Contacto</a>
             </nav>
             
@@ -23,4 +23,4 @@ const Encabezado = () => {
     )
 }
 
-export default Encabezado;
+export default Header;

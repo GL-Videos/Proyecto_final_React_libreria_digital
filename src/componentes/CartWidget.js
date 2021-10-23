@@ -1,8 +1,8 @@
 
-const Carrito = () => {
+const ShoppingCart = () => {
     return(
         <span className="material-icons">add_shopping_cart</span>
     )
 }
 
-export default Carrito;
+export default ShoppingCart;
