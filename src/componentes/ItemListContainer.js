@@ -1,7 +1,7 @@
 
 const User = ({nombre, apellido}) => {
     return (
-            <h2 className="container">Clase 4 - Desafío: Crea tu landing - {nombre} {apellido}</h2>
+            <h2>Clase 5 - Desafío: Contador con botón - {nombre} {apellido}</h2>
     )
 }
 

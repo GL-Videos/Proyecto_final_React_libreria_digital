@@ -41,6 +41,48 @@ body {
     text-transform: uppercase;
 }
 
+.container {
+    margin-bottom: 100px;
+}
+
+.portadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.portadaLibro {
+    width: 150px;
+    height: auto;
+}
+
+.keypad {
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+
+.keypad button {
+    margin: 0 15px 0 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(20, 20, 56);
+}
+
+.buttonAdd {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.buttonAddState {
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+
 footer {
     display: flex;
     flex-direction: column;
@@ -48,7 +90,7 @@ footer {
 }
 
 .redes {
-    margin-top: 370px;
+    margin-top: 90px;
     margin-bottom: 20px;
 }
 
