@@ -9,9 +9,8 @@ const Books = () => {
         <>
         <section className="portadas">
             <div><img src={portada_el_padrino} alt="El Padrino" className="portadaLibro"/></div>
-            <div><ItemCount/></div>
+            <div><ItemCount stock="10" initial="0"/></div>
         </section>
-        
         </>
     )
 

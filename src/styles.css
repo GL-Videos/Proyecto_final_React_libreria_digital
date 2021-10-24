@@ -82,6 +82,15 @@ body {
     font-weight: bold;
 }
 
+.buttonCart {
+    width: 140px;
+    height: 30px;
+    margin: 0 15px 0 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(20, 20, 56);
+}
+
 
 footer {
     display: flex;

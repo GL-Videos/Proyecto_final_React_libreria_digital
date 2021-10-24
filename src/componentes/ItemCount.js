@@ -2,15 +2,15 @@ import { useState } from "react";
 
 // Creamos el contador de items
 
-const ItemCount = () => {
+const ItemCount = ({stock, initial, onAdd}) => {
 
-    const [state, setState] = useState(0);
+    const [state, setState] = useState(initial);
 
     const showCounterAdd = () => {
         if (state < 10) {
             setState(state + 1);
         } else {
-            setState(state)
+            setState(stock)
         }
     }
 
@@ -22,12 +22,22 @@ const ItemCount = () => {
         }
     }
 
+    const addShoppingCart = () => {
+        onAdd = "Se agregó correctamente"
+        alert (onAdd)
+    }
+
     return (
+        <>
         <div className="keypad">
             <button onClick={showCounterLess} className="buttonAdd">-</button>
             <p className="buttonAddState">{state}</p>
             <button onClick={showCounterAdd} className="buttonAdd">+</button>
         </div>
+        <div>
+            <button onClick={addShoppingCart} className="buttonCart">Agregar al carrito</button>
+        </div>
+        </>
     )
 
 
