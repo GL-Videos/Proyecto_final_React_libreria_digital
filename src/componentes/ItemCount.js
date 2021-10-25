@@ -7,7 +7,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [state, setState] = useState(initial);
 
     const showCounterAdd = () => {
-        if (state < 10) {
+        if (state < stock) {
             setState(state + 1);
         } else {
             setState(stock)
@@ -22,10 +22,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
-    const addShoppingCart = () => {
-        onAdd = "Se agregó correctamente"
-        alert (onAdd)
-    }
 
     return (
         <>
@@ -35,7 +31,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button onClick={showCounterAdd} className="buttonAdd">+</button>
         </div>
         <div>
-            <button onClick={addShoppingCart} className="buttonCart">Agregar al carrito</button>
+            <button onClick={onAdd} className="buttonCart">Agregar al carrito</button>
         </div>
         </>
     )
