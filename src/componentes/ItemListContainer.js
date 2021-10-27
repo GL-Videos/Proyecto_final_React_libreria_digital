@@ -1,9 +1,13 @@
 import ItemCount from "./ItemCount";
 import portada_el_padrino from "../multimedia/portada_el_padrino.jpg"
+import ItemList from "./ItemList"
 
 // Galería de Libros
 
-const Books = ({nombre, apellido}) => {
+
+const Books = ({nombre, apellido,}) => {
+
+
     return (
             
         <>
@@ -15,6 +19,10 @@ const Books = ({nombre, apellido}) => {
                 <ItemCount stock="10" initial="0" onAdd={function(){console.log(`Se agregaron x items al carrito`)}}/>
             </div>
         </section>
+            <div className="ofertas">
+                <h2>OFERTAS DEL MES</h2>
+                <ItemList/>
+            </div>
         </>
     )
 }

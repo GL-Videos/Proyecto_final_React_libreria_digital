@@ -91,6 +91,14 @@ body {
     background-color: rgb(20, 20, 56);
 }
 
+.ofertas {
+    margin: 50px 0 0 30px;
+}
+
+.ofertas img {
+    margin: 10px;
+}
+
 
 footer {
     display: flex;
