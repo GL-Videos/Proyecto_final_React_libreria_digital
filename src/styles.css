@@ -92,12 +92,27 @@ body {
 }
 
 .ofertas {
-    margin: 50px 0 0 30px;
+    margin: 80px 0 0 30px;
+    text-align: center;
 }
 
-.ofertas img {
-    margin: 10px;
+.productCatalog {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    padding: 20px;
 }
+
+.productCatalogItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
 
 
 footer {
