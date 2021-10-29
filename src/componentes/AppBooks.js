@@ -2,14 +2,14 @@
 
 import Header from "./Header";
 import Footer from "./Footer";
-import Books from "./ItemListContainer";
+import ItemListContainer from "./ItemListContainer";
 
 
 const AppBooks = () => {
     return (
         <>
         <Header/>
-        <Books nombre="Gabriela" apellido="Lupidi"/>
+        <ItemListContainer nombre="Gabriela" apellido="Lupidi"/>
         <Footer/>
         </>
     )

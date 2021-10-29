@@ -6,12 +6,12 @@ const Footer = () => {
         <>
         
         <footer>
-            <div className="redes">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+            <div className="socialNetworks">
+                <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+                <a href="https://twitter.com/" target="_blank" rel="noreferrer">Twitter</a>
             </div>
-                <h5 className="textoFooter">ⒸCopyright Todos los derechos reservados. Gabriela Lupidi 2021</h5>
+                <p className="textFooter">ⒸCopyright Todos los derechos reservados. Gabriela Lupidi 2021</p>
         </footer>
         </>
     )

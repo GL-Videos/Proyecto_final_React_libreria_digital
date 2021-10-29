@@ -1,7 +1,9 @@
 import React,{useState} from "react";
 import ItemCount from "./ItemCount";
 
-const CountContainer = ({initial,stock,productName}) => {
+// Hacemos el contenedor del contador, donde van a estar las funciones de los botones para sumar, restar y para agregar al carrito. Dentro del componente ItemCount que importamos, asignamos las funciones para darle la funcionabilidad a los props.
+
+const CountContainer = ({initial,stock,productName,}) => {
     
     const [state, setState] = useState(initial);
 
@@ -30,7 +32,7 @@ const CountContainer = ({initial,stock,productName}) => {
         
             return (
                 <>
-                <ItemCount min={showCounterLess} max={showCounterAdd} onAdd={onAdd} state={state} productName={productName}/>
+                <ItemCount min={showCounterLess} max={showCounterAdd} onAdd={onAdd} state={state}  productName={productName}/>
                 </>
             );
     

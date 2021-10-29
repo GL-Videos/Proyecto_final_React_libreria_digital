@@ -1,14 +1,12 @@
 
-
 // Creamos el contador de items
 
-const ItemCount = ({min, max, state, productName, onAdd}) => {
-
-    // console.log(state);
+const ItemCount = ({min, max, state, productName, price, onAdd}) => {
 
     return (
         <>
-            <h3>{productName}</h3>
+            <h3 className="titleProduct">{productName}</h3>
+            <h5 className="titleProduct">{price}</h5>
         <div className="keypad">
             <button onClick={min} className="buttonAdd">-</button>
             <p className="buttonAddState">{state}</p>
@@ -19,18 +17,6 @@ const ItemCount = ({min, max, state, productName, onAdd}) => {
         </div>
         </>
     )
-
-
-
-    // Reducción de código
-    // return (
-    //     <>
-    //         <button onClick={() => setState(state-1)} className="buttonLess">-</button>
-    //         <p className="buttonAddState">{state}</p>
-    //         <button onClick={() => setState(state+1)} className="buttonAdd">+</button>
-    //     </>
-    // )
-
 }
 
 export default ItemCount;

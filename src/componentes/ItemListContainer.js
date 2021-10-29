@@ -4,7 +4,7 @@ import ItemList from "./ItemList"
 import libros from './libros.json';
 import {useState} from 'react'
 
-const Books = ({nombre, apellido,}) => {
+const ItemListContainer = ({nombre, apellido,}) => {
 
 
     const[item,setItems]=useState([])
@@ -27,25 +27,26 @@ Si la respuesta no es correcta, que me muestre un mensaje de error por consola*/
         setItems(resolve)
     })
 
-
+// Imprimimos en el contenedor general la lista de los productos con el contador. En el componente ItemCount que importamos le otorgamos los valores a los props
     return (
             
         <>
-        <h2>Clase 6 - Desafío: Catálogo con MAPS y Promises - {nombre} {apellido}</h2>
-
-        <section className="portadas">
-            <div><img src={portada_el_padrino} alt="El Padrino" className="portadaLibro"/></div>
+        <section className="asaid">
+            <h2>Destacados del mes</h2>
             <div>
-                <ItemCount productName="El Padrino" stock={10} initial={0}/>
+                <img src={portada_el_padrino} alt="El Padrino" className="portadaLibro" width="150px"/></div>
+            <div>
+                <ItemCount productName="El Padrino" stock={10} initial={0} price="$300"/>
             </div>
         </section>
             <div>
-                <h2 className="ofertas">OFERTAS DEL MES</h2>
-                <ItemList items={item}/>
+                <h2 className="sales">Ofertas del mes</h2>
+                <main className="productCatalog"><ItemList items={item}/></main>
             </div>
+            <h4 className="coderHouse">Clase 7 - Desafío: Detalle de Producto - {nombre} {apellido}</h4>
         </>
     )
 }
 
     
-export default Books;
+export default ItemListContainer;
