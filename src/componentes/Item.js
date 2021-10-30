@@ -11,7 +11,7 @@ const Item = ({libros}) => {
            <h3>{libros.title}</h3>
            <h4>{libros.author}</h4>
            <h5>{libros.price}</h5>
-           <a href="/" className="itemMore">Ver más...</a>
+           <a href={libros.id} className="itemMore">Ver más...</a>
            <p>{libros.description}</p>
         </div>
         </>
