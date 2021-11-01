@@ -2,8 +2,8 @@
 
 import Header from "./Header";
 import Footer from "./Footer";
+import ItemDetailContainer from "./ItemDetailContainer"
 import ItemListContainer from "./ItemListContainer";
-import ItemDetailContainer from "./ItemDetailContainer";
 
 
 const AppBooks = () => {

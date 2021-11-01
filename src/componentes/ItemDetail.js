@@ -1,27 +1,18 @@
-import ItemCount from './CountContainer';
-import harry_potter_3 from '../multimedia/harry_potter_3.jpg';
 
-const ItemDetail =({jsonBooks})=>{
-    console.log(jsonBooks);
-    return(
-      <>
+const ItemDetail = ({image, title, author, price, description}) => {
+    return (
+        <>
         <div className="productCatalogItems">
            <section className="asaid"> 
-               <h2>Saga del mes</h2>
-               <img src={harry_potter_3} alt="Harry Potter" width="128" height="128"/>
+           <img src={image} alt="Harry Potter" width="250"/>
+           <h3>{title}</h3>
+           <h4>{author}</h4>
+           <h5>{price}</h5>
+           <p>{description}</p>
            </section>
-           <h3>{jsonBooks.libro}</h3>
-           <h4>{jsonBooks.autora}</h4>
-           <h5>$400</h5>
-           <a href={jsonBooks.id} className="itemMore">Ver más...</a>
-           <p>{jsonBooks.descripcion}</p>
         </div>
-        <ItemCount productName={jsonBooks.libro} stock={6} initial={1}/>
       </>
     )
-
-};
-
-
+}
 
 export default ItemDetail;

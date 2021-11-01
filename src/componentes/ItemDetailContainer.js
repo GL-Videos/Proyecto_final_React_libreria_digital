@@ -1,40 +1,46 @@
-import ItemDetail from "./ItemDetail";
-import {useState} from 'react';
 
+import ItemCount from "./ItemCount";
+import ItemDetail from "./ItemDetail";
+import sagasJSON from "./sagas.json";
+import {useState, useEffect} from 'react';
 
 const ItemDetailContainer = () => {
+    
+    const [saga,setSaga]=useState([])
+    
+    
+    const getItem = () => {
+        return new Promise((resolve,reject) => {
+            setTimeout(()=>{
+                resolve(sagasJSON)
+            },2000);
+        });
+    }
 
-    const [books,setBooks]=useState()
+            
+        useEffect(()=>{
+            getItem().then(setSaga)
+        }, []);
 
-    fetch("https://fedeperin-harry-potter-api.herokuapp.com/libros/3")
-    .then(response=>response.json())
-    .then(data=>setBooks(data.results));
-     
-
-    const getItem = new Promise((resolve,reject)=>{
-        if(resolve){ setTimeout(()=>{
-            resolve(setBooks)
-        },2000)
-        
-        } else{
-            reject(console.log("Error en cargar las ofertas"))}        
-        })
-        
-
-    getItem.then(resolve => {
-        setBooks(resolve)
-    })
-
+    // console.log(saga);
 
     return (
-            
-        <>
-            <div className="asaid">
-                {books && books.map(item=><ItemDetail key={item.id} jsonBooks={item}/>)}
+        <section className="asaid">
+            <h2>Destacados de la semana</h2>
+            <div className="productCatalog">
+                {saga.map(saga => 
+                        <ItemDetail 
+                        key={saga.id}
+                        image={saga.pictureurl}
+                        title={saga.title}
+                        author={saga.author}
+                        price={saga.price}
+                        description={saga.description}
+                        />)}
             </div>
-        </>
+            <ItemCount stock={7} initial={0} onAdd={function(){console.log(`Se agregaron x items al carrito`)}}/>
+        </section>
     )
+}
 
-    }
-    
 export default ItemDetailContainer;
