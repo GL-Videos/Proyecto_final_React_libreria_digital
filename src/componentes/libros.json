@@ -2,28 +2,40 @@
 
 [
     {
-        "id":"1",
+        "id":1,
         "title":"1984",
         "author":"George Orwell",
         "description":"Winston Smith decide rebelarse ante un gobierno totalitario que controla cada uno de los movimientos de sus ciudadanos y castiga incluso a aquellos que delinquen con el pensamiento.",
         "price":"$300",
+        "category": "libros",
         "pictureurl":"https://ih1.redbubble.net/image.632703468.6415/flat,128x128,075,f-pad,128x128,f8f8f8.u6.jpg"
     },
     {
-        "id":"2",
+        "id":2,
         "title":"Orgullo y Prejuicio",
         "author":"Jane Austin",
         "description":"Con la llegada del rico y apuesto Mr. Darcy a su región, las vidas de los Bennet y sus cinco hijas se vuelven del revés. El orgullo y la distancia social, la astucia y la hipocresía, los malentendidos y los juicios apresurados abocan a sus personajes al escándalo y al dolor, pero también a la comprensión, el conocimiento y el amor verdadero.",
         "price":"$250",
+        "category": "libros",
         "pictureurl":"https://descargas.ams3.digitaloceanspaces.com/images/7860/orgullo-y-prejuicio_icon_android.jpg"
     },
     {
-        "id":"3",
+        "id":3,
         "title":"Harry Potter y la piedra filosofal",
         "author":"J.K. Rowling",
         "description":"Harry Potter se ha quedado huérfano y vive en casa de sus abominables tíos y el insoportable primo Dudley. Harry se siente muy triste y solo, hasta que un buen día recibe una carta que cambiará su vida para siempre. En ella le comunican que ha sido aceptado como alumno en el Colegio Hogwarts de Magia.",
         "price":"$400",
+        "category": "sagas",
         "pictureurl":"https://m.media-amazon.com/images/I/71xQ5ijeYHL._CR0,204,1224,1224_UX256.jpg"
+    },
+    {
+        "id":4,
+        "title":"Harry Potter y el prisionero de Azkaban",
+        "author":"J.K. Rowling",
+        "description":"El tercer año de estudios de Harry en Hogwarts se ve amenazado por la fuga de Sirius Black de la prisión de Azkaban.",
+        "price":"$400",
+        "category": "sagas",
+        "pictureurl":"https://images.cdn3.buscalibre.com/fit-in/360x360/39/98/39981315c547a2bd1325200b546c3ba3.jpg"
     }
 
 ]

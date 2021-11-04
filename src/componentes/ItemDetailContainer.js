@@ -1,23 +1,26 @@
 
-import ItemCount from "./ItemCount";
+
 import ItemDetail from "./ItemDetail";
-import sagasJSON from "./sagas.json";
+import libros from "./libros.json";
 import {useState, useEffect} from 'react';
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     
     const [saga,setSaga]=useState([])
-    
-    
+    const {id} = useParams();
+
+    const results = libros.filter(libro => libro.id == id);
+
     const getItem = () => {
         return new Promise((resolve,reject) => {
             setTimeout(()=>{
-                resolve(sagasJSON)
+                resolve(results)
             },2000);
         });
     }
 
-            
+
         useEffect(()=>{
             getItem().then(setSaga)
         }, []);
@@ -26,7 +29,7 @@ const ItemDetailContainer = () => {
 
     return (
         <section className="asaid">
-            <h2>Destacados de la semana</h2>
+            <h2>Libro</h2>
             <div className="productCatalog">
                 {saga.map(saga => 
                         <ItemDetail 
@@ -38,7 +41,6 @@ const ItemDetailContainer = () => {
                         description={saga.description}
                         />)}
             </div>
-            <ItemCount stock={7} initial={0} onAdd={function(){console.log(`Se agregaron x items al carrito`)}}/>
         </section>
     )
 }

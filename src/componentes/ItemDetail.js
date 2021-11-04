@@ -1,4 +1,6 @@
 
+import ItemCount from "./ItemCount";
+
 const ItemDetail = ({image, title, author, price, description}) => {
     return (
         <>
@@ -9,6 +11,7 @@ const ItemDetail = ({image, title, author, price, description}) => {
            <h4>{author}</h4>
            <h5>{price}</h5>
            <p>{description}</p>
+           <ItemCount stock={7} initial={0} onAdd={function(){console.log(`Se agregaron x items al carrito`)}}/>
            </section>
         </div>
       </>
