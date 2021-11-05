@@ -1,7 +1,9 @@
+import { NavLink } from "react-router-dom";
+
 
 const ShoppingCart = () => {
     return(
-        <span className="material-icons">shopping_cart</span>
+        <NavLink to={`/cart`}><span className="material-icons">shopping_cart</span></NavLink>
     )
 }
 

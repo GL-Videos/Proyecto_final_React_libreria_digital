@@ -39,6 +39,7 @@ const ItemListContainer = ({}) => {
                 setItems(resolve)
             })
      }, [categoryId])
+   
 
     return (
             
@@ -49,7 +50,7 @@ const ItemListContainer = ({}) => {
             <main className="productCatalog"><ItemList items={item}/></main>
         </div>
 
-        <h4 className="coderHouse">Clase 8 - Primera Entrega del Proyecto Final - Gabriela Lupidi</h4>
+        <h4 className="coderHouse">Clase 9 - Desafío: Sincronizar counter - Gabriela Lupidi</h4>
         
         </>
     )
