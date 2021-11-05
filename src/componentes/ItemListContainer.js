@@ -18,7 +18,6 @@ const ItemListContainer = ({}) => {
         let promesa 
         
          if(categoryId){
-             console.log("Acá hago el pedido de productos filtrando por categoría", categoryId);
 
             promesa = new Promise((resolve,reject)=>{
                  setTimeout(()=>{
@@ -27,7 +26,6 @@ const ItemListContainer = ({}) => {
              })
 
          }else{
-             console.log("Acá hago el pedido de productos sin filtrar");
 
              promesa = new Promise((resolve,reject)=>{
                  setTimeout(()=>{

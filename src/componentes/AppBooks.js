@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import ItemDetailContainer from "./ItemDetailContainer"
 import ItemListContainer from "./ItemListContainer";
+import Cart from "./Cart";
 
 
 const AppBooks = () => {
@@ -13,9 +14,10 @@ const AppBooks = () => {
         <BrowserRouter>
             <Header/>
             {/* <ItemDetailContainer/> */}
-            <Route exact path="/" exact component={ItemListContainer}/>
-            <Route exact path="/categoria/:categoryId" component={ItemListContainer}/>
-            <Route exact path="/item/:id" component={ItemDetailContainer}/>
+            <Route path="/" component={ItemListContainer} exact/>
+            <Route path="/categoria/:categoryId" component={ItemListContainer} exact/>
+            <Route path="/item/:id" component={ItemDetailContainer} exact/>
+            <Route path="/cart" component={Cart} exact/>
             <Footer/>
         </BrowserRouter>
         </>
