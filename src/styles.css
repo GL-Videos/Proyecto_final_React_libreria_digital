@@ -10,6 +10,12 @@
 
 /*-------------------------------------------------HEADER---------------------------------------------------------*/
 
+.loading {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .principalHeader {
     display: flex;
     justify-content: flex-end;
@@ -31,6 +37,12 @@
     font-weight: bold;
     font-size: 15pt;
     color: white;
+}
+
+.widgetNumber {
+    color: white;
+    font-weight: 400;
+    font-size: 13pt;
 }
 
 /*------------------------------------------------CONTAINER---------------------------------------------------------*/
@@ -98,6 +110,39 @@
     border-radius: 5px;
 }
 
+.finishShop {
+    width: 140px;
+    height: 30px;
+    margin: 10px 15px 0 15px;
+    font-weight: 500;
+    color: white;
+    text-shadow: rgba(173, 173, 173, 0.767) 1px 1px;
+    background-color: rgb(23, 23, 78);
+    border-radius: 5px;
+}
+
+.btnRemove {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background-color: rgb(179, 15, 15);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.btnEmpty {
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    background-color: rgb(179, 15, 15);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
 
 .sales {
     margin: 80px 0 0 30px;
@@ -133,7 +178,52 @@
     text-align: center;
 }
 
-/*-------------------------------------------------FOOTER---------------------------------------------------------*/
+/*--------------------------------------------------------CART--------------------------------------------------------------*/
+
+.textCart {
+    color: rgb(24, 0, 44);
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.textCartFinish {
+    color: rgb(24, 0, 44);
+    text-transform: uppercase;
+    margin: 20px;
+    font-size: 15pt;
+    text-align: center;
+}
+
+.containerCart {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+
+.containerProduct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+.containerProduct h4{
+    border-right: black solid 2px;
+    padding-right: 40px;
+}
+
+.keypadCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+/*-------------------------------------------------------FOOTER-------------------------------------------------------------*/
 
 
 footer {

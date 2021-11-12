@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 // Creamos el contador de items
 
@@ -32,23 +31,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <button onClick={showCounterAdd} className="buttonAdd">+</button>
         </div>
         <div>
-            <NavLink to={`/Cart`}>
-                <button onClick={()=>onAdd(state)} className="buttonCart">Agregar al carrito</button>
-                </NavLink>
+        <button onClick={()=>onAdd(state)} className="buttonCart">Agregar al carrito</button>
         </div>
         </>
     )
-
-
-
-    // Reducción de código
-    // return (
-    //     <>
-    //         <button onClick={() => setState(state-1)} className="buttonLess">-</button>
-    //         <p className="buttonAddState">{state}</p>
-    //         <button onClick={() => setState(state+1)} className="buttonAdd">+</button>
-    //     </>
-    // )
 
 }
 
