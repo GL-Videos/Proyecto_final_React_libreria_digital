@@ -1,46 +1,35 @@
 import ItemList from "./ItemList";
-import libros from "./libros.json";
+// import libros from "./libros.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { firestore } from "../firebase/firebase";
 
 // Galería de Libros
 
 const ItemListContainer = ({}) => {
   const [item, setItems] = useState([]);
-
-  // Filtro los productos
-
+  // Filtro los productos por categoria
   const { categoryId } = useParams();
 
   useEffect(() => {
-    let promesa;
+  const dataBase = firestore();
+  let libros
 
-    if (categoryId) {
-      promesa = new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(libros.filter((libros) => libros.category === categoryId));
-        }, 2000);
-      });
-    } else {
-      promesa = new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(libros);
-        }, 2000);
-      });
-    }
+  if (categoryId){
+      libros = dataBase.collection("libros").where("category", "==", categoryId)
+  } else{
+      libros = dataBase.collection("libros")
+  }
 
-    promesa.then((resolve) => {
-      setItems(resolve);
-    });
-  }, [categoryId]);
+  const librosQuery = libros.get()
 
-  if (item.length === 0) {
-    return (
-      <div className="loading">
-        <img src="/loading3.gif" alt="Cargando" />
-      </div>
-    );
-  } else {
+  librosQuery.then((queryDataBase) => {
+      setItems(queryDataBase.docs.map(doc => ({...doc.data(), id: doc.id})))
+  })
+  .catch(() => {console.log("No se cargó el catálogo")})
+  
+},[categoryId])
+
     return (
       <>
         <div>
@@ -51,11 +40,11 @@ const ItemListContainer = ({}) => {
         </div>
 
         <h4 className="coderHouse">
-          Clase 11 - Desafío: Cart View - Gabriela Lupidi
+          Clase 13 - Desafío: Item Collection II - Gabriela Lupidi
         </h4>
       </>
     );
-  }
+  
 };
 
 export default ItemListContainer;

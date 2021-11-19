@@ -1,44 +1,34 @@
 import ItemDetail from "./ItemDetail";
-import libros from "./libros.json";
+// import libros from "./libros.json";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { firestore } from "../firebase/firebase";
 
 const ItemDetailContainer = () => {
+  const [loading, setLoading] = useState(false);
   const [saga, setSaga] = useState([]);
-  const { id } = useParams();
-
-  const results = libros.filter((libro) => libro.id == id);
-
-  const getItem = () => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(results);
-      }, 2000);
-    });
-  };
+  const { productId } = useParams();
 
   useEffect(() => {
-    getItem().then(setSaga);
-  }, []);
+    const dataBase = firestore();
+    const getItem = dataBase.collection("libros").doc(productId);
 
-  if (saga.length === 0) {
-    return (
-      <div className="loading">
-        <img src="/loading3.gif" alt="Cargando" />
-      </div>
-    );
-  } else {
-    return (
-      <section className="asaid">
+    getItem.get()
+      .then((queryDataBase) => {
+        setSaga({ id: queryDataBase.id, ...queryDataBase.data() });
+        setLoading(false);})
+      .catch(() => {
+        console.log("No se cargó correctamente");});
+  }, [productId]);
+
+  return (
+    <section className="asaid">
         <h2>Libro</h2>
         <div className="productCatalog">
-          {saga.map((saga) => (
-            <ItemDetail key={saga.id} books={saga} />
-          ))}
+            {loading ? "Cargando catálogo..." : <ItemDetail key={saga.id} books={saga}/>}
         </div>
-      </section>
-    );
-  }
+    </section>
+  );
 };
 
 export default ItemDetailContainer;

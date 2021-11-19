@@ -18,7 +18,7 @@ const AppBooks = () => {
                 <Header/>
                 <Route path="/" component={ItemListContainer} exact/>
                 <Route path="/categoria/:categoryId" component={ItemListContainer} exact/>
-                <Route path="/item/:id" component={ItemDetailContainer} exact/>
+                <Route path="/item/:productId" component={ItemDetailContainer} exact/>
                 <Route path="/cart" component={Cart} exact/>
                 <Footer/>
             </ShoppingContext>
