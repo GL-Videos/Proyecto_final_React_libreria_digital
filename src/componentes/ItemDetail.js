@@ -10,7 +10,6 @@ const ItemDetail = ({books}) => {
   const [show, setShow] = useState(false);
 
   const getDataCounter = (dataCounter) => {
-      // console.log(`Se agregaron ${dataCounter} items al carrito de ${books.title}`);
       addItem(books, dataCounter);
       setShow(!show);
   }

@@ -10,12 +10,6 @@
 
 /*-------------------------------------------------HEADER---------------------------------------------------------*/
 
-.loading {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
 .principalHeader {
     display: flex;
     flex-flow: row wrap;
@@ -310,3 +304,5 @@ footer {
     color: rgb(228, 228, 228);
     font-size: 16pt;
 }
+
+

@@ -13,8 +13,10 @@ const ShoppingContext = ({children}) => {
         const proof = isInCart(books)
         if (proof) {
             setProducts(products.map(item => item.id === books.id ? {...books, dataCounter: item.dataCounter + dataCounter } : item))
+            // localStorage.setItem("bookShop", JSON.stringify(products.map(item => item.id === books.id ? {...books, dataCounter: item.dataCounter + dataCounter } : item)));
         } else {
             setProducts([...products, {...books, dataCounter }])
+            // localStorage.setItem("bookShop", JSON.stringify([...products, {...books, dataCounter }]));
         }
     }
 
@@ -36,6 +38,7 @@ const ShoppingContext = ({children}) => {
 
     const clearCart = () => {
         setProducts([])
+        // localStorage.clear();
     }
 
     const valueContext = {products, addItem, removeItem, totalProductsPrice, cartWidgetCount, clearCart}
